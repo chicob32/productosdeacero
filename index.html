@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos de Acero - Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Marco de la página -->
+    <div class="page-border">
+        <!-- Menú de navegación -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Inicio</a></li>
+                <li><a href="#" onclick="showSection('catalog')">Catálogo</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenedor principal -->
+        <div class="container">
+            <!-- Sección Inicio -->
+            <section id="home" class="content-section">
+                <header>
+                    <h1>Nuestra Empresa de Productos de Acero</h1>
+                </header>
+                <p>Somos una empresa dedicada a la fabricación y distribución de productos de acero de alta calidad. Nos especializamos en crear artículos duraderos y resistentes, ideales para uso industrial y doméstico. Nuestro compromiso es ofrecer productos que cumplan con los más altos estándares de calidad y satisfacción del cliente.</p>
+                <p>Desde nuestra fundación, nos hemos comprometido a innovar en el diseño y fabricación de productos de acero que se adapten a las necesidades actuales, manteniendo un enfoque en la sostenibilidad y el respeto por el medio ambiente.</p>
+            </section>
+
+            <!-- Sección Catálogo -->
+           <!-- Sección Catálogo en index.html -->
+<section id="catalog" class="content-section">
+    <h2>Catálogo de Productos de Acero</h2>
+    <ul>
+        <li><a href="termo.html">Termo de Acero Inoxidable</a></li>
+        <li>Botella de Agua de Acero</li>
+        <li>Cubiertos de Acero Reutilizables</li>
+        <li>Vasos de Acero para Camping</li>
+        <li>Contenedor de Alimentos de Acero</li>
+        <li>Jarra de Acero con Tapa</li>
+        <li>Cubeta de Acero para Hielo</li>
+    </ul>
+</section>
+
+            <!-- Sección Contacto -->
+            <section id="contact" class="content-section">
+                <h2>Contacto</h2>
+                <p>Si deseas conocer más sobre nuestros productos de acero o tienes alguna consulta, no dudes en contactarnos.</p>
+                <p><strong>Teléfono:</strong> +52 55 1234 5678</p>
+                <p><strong>Email:</strong> info@productosdeacero.com</p>
+                <p><strong>Dirección:</strong> Av. Industria 123, Parque Industrial, Ciudad de México</p>
+            </section>
+        </div>
+    </div>
+
+    <!-- JavaScript para mostrar/ocultar secciones -->
+    <script>
+        function showSection(sectionId) {
+            // Oculta todas las secciones
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none');
+            
+            // Muestra la sección seleccionada
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Muestra la sección de Inicio al cargar la página
+        window.onload = function() {
+            showSection('home');
+        };
+    </script>
+</body>
+</html>
+
+

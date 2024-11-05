@@ -1,19 +1,33 @@
+/* Ajustes generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    padding: 10px; /* Agrega un pequeño margen para evitar que el contenido toque los bordes en pantallas pequeñas */
+}
+
 /* Marco de color para la página */
 .page-border {
     padding: 10px;
     background-color: #3a6ea5;
+    width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+    display: flex;
+    justify-content: center;
 }
 
 /* Contenedor principal */
 .container {
     max-width: 600px;
-    margin: auto;
+    width: 100%; /* Asegura que el contenedor se adapte a pantallas pequeñas */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -33,10 +47,11 @@
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos del menú se ajusten en pantallas pequeñas */
 }
 
 .navbar li {
-    margin: 0 15px;
+    margin: 5px 10px;
 }
 
 /* Estilo de botones con efecto de profundidad */
@@ -62,28 +77,30 @@
     transform: translateY(4px);
 }
 
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f3f4f6;
+/* Imagen del producto */
+.product-image img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+    height: auto;
+    border-radius: 8px;
 }
 
-/* Espaciado entre secciones */
-section {
-    margin-bottom: 40px;
+/* Detalles del producto */
+.product-details {
+    text-align: left;
+    margin: 20px 0;
 }
 
+/* Espaciado para los textos */
 h2 {
     color: #333;
     margin-bottom: 10px;
+    font-size: 1.5em; /* Ajusta el tamaño de fuente para mejorar la legibilidad */
 }
 
 p, ul {
     color: #555;
     text-align: left;
+    line-height: 1.6; /* Aumenta el interlineado para mejorar la legibilidad */
 }
 
 ul {
@@ -91,13 +108,21 @@ ul {
     margin-left: 20px;
 }
 
-footer p {
-    margin-top: 20px;
-    color: #777;
-}
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.4em;
+    }
 
-footer img {
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
+    p, ul {
+        font-size: 1em;
+    }
+    
+    .navbar ul {
+        flex-direction: column; /* Coloca los elementos del menú en una columna en pantallas pequeñas */
+    }
 }

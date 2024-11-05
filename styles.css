@@ -12,14 +12,14 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f3f4f6;
-    padding: 10px; /* Agrega un pequeño margen para evitar que el contenido toque los bordes en pantallas pequeñas */
+    padding: 10px;
 }
 
 /* Marco de color para la página */
 .page-border {
     padding: 10px;
     background-color: #3a6ea5;
-    width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -27,7 +27,7 @@ body {
 /* Contenedor principal */
 .container {
     max-width: 600px;
-    width: 100%; /* Asegura que el contenedor se adapte a pantallas pequeñas */
+    width: 100%;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -47,11 +47,11 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite que los elementos del menú se ajusten en pantallas pequeñas */
+    gap: 15px; /* Espacio entre los botones */
 }
 
 .navbar li {
-    margin: 5px 10px;
+    margin: 0;
 }
 
 /* Estilo de botones con efecto de profundidad */
@@ -79,7 +79,7 @@ body {
 
 /* Imagen del producto */
 .product-image img {
-    width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+    width: 100%;
     height: auto;
     border-radius: 8px;
 }
@@ -94,13 +94,13 @@ body {
 h2 {
     color: #333;
     margin-bottom: 10px;
-    font-size: 1.5em; /* Ajusta el tamaño de fuente para mejorar la legibilidad */
+    font-size: 1.5em;
 }
 
 p, ul {
     color: #555;
     text-align: left;
-    line-height: 1.6; /* Aumenta el interlineado para mejorar la legibilidad */
+    line-height: 1.6;
 }
 
 ul {
@@ -122,7 +122,9 @@ ul {
         font-size: 1em;
     }
     
+    /* Mantiene el menú en una sola fila en pantallas pequeñas */
     .navbar ul {
-        flex-direction: column; /* Coloca los elementos del menú en una columna en pantallas pequeñas */
+        flex-direction: row;
+        justify-content: center;
     }
 }
